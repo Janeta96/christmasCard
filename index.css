@@ -1,0 +1,78 @@
+body {
+    background-image: url("https://m.media-amazon.com/images/I/61g92GWq1kL._AC_UF894,1000_QL80_.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 60% -10%;
+    margin: 0;
+    font-family: 'fantasy', serif;
+    font-size: 25px;
+    align-items: center;
+    line-height: 1.5;
+}
+
+.christmas-icon {
+    width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.card {
+    width: 500px;
+    height: 400px;
+    perspective: 1000px;
+    margin: 10% auto;
+
+}
+
+.cover {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card:hover .cover {
+    transform: rotateY(180deg);
+}
+
+.inside {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.front {
+    background-color: #8f0011;
+    border-radius: 10px;
+    padding: 20px;
+    transform: rotateY(0deg);
+}
+
+.back {
+    background-color: #025025;
+    border-radius: 10px;
+    padding: 20px;
+    transform: rotateY(180deg);
+    text-align: center;
+}
+
+.title {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.body-text {
+    color: white;
+    margin: auto;
+}
